@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090709">
+  <title>Multiverso JP | Una historia entre universos</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="ambient" aria-hidden="true">
+    <div class="smoke smoke-one"></div>
+    <div class="smoke smoke-two"></div>
+    <div class="smoke smoke-three"></div>
+    <div class="stars"></div>
+  </div>
+  <div class="shell">
+    <header class="topbar"><span class="brand">JP <span class="brand-dot">✦</span> MULTIVERSO</span><button
+        id="musicToggle" class="music-button" type="button" aria-label="Activar o pausar música" hidden>♫ Música:
+        pausada</button></header>
+    <main>
+      <section id="login" class="screen active" aria-labelledby="loginTitle">
+        <div class="eyebrow">UNA EXPERIENCIA PARA TI</div>
+        <div class="ornament" aria-hidden="true">✧</div>
+        <h1 id="loginTitle">MULTIVERSO <em>JENIFER</em></h1>
+        <p class="lead">Hay historias que no caben en un solo universo.</p>
+        <div class="divider"></div>
+        <form id="loginForm" class="login-form">
+          <label for="password">Una clave para abrir nuestro universo</label>
+          <input id="password" type="password" placeholder="Contraseña" autocomplete="off" required>
+          <p id="loginError" class="error" role="alert" aria-live="polite"></p>
+          <button class="primary" type="submit">Entrar a nuestro universo <span aria-hidden="true">→</span></button>
+        </form>
+        <p class="hint">Un pequeño secreto. Una gran historia.</p>
+      </section>
+      <section id="welcome" class="screen" aria-labelledby="welcomeTitle" hidden>
+        <div class="eyebrow">EL COMIENZO DE ALGO INFINITO</div>
+        <div class="ornament" aria-hidden="true">✦</div>
+        <h2 id="welcomeTitle">Feliz cumpleaños, <em>mi amor</em></h2>
+        <p class="lead">
+          En este universo y en todos los que puedan existir, hay algo que quiero celebrar:
+          <br><br>
+          <span style="display: block; text-align: center; font-weight: bold;">
+            QUE TÚ EXISTES.
+          </span>
+        </p>
+        <p class="body-copy">Este es el comienzo de un viaje hecho especialmente para ti.</p>
+        <div class="actions"><button class="primary" type="button" data-next>Comenzar el viaje →</button></div>
+      </section>
+      <section id="journey" class="screen journey-screen" aria-labelledby="journeyTitle" hidden>
+        <div class="eyebrow" id="universeCounter">UNIVERSO 01 DE 13</div>
+        <div class="ornament" aria-hidden="true">✦</div>
+        <h2 id="journeyTitle">Un mundo <em>para ti</em></h2>
+        <figure class="universe-figure">
+          <img id="universeImage" src="" alt="" loading="eager">
+        </figure>
+        <p id="universePhrase" class="universe-phrase"></p>
+        <div class="actions journey-actions">
+          <button class="secondary" id="previousUniverse" type="button">← Anterior</button>
+          <button class="primary" id="nextUniverse" type="button">Siguiente universo →</button>
+        </div>
+        <p class="universe-progress" id="universeProgress" aria-live="polite"></p>
+      </section>
+    </main>
+    <footer class="footer">HECHO CON AMOR <span aria-hidden="true">✦</span> JP</footer>
+  </div>
+  <audio id="music" preload="auto" loop>
+    <source src="music/La Guardia - El Mundo Tras El Cristal.mp3" type="audio/mpeg">
+  </audio>
+</body>
+
+</html>
